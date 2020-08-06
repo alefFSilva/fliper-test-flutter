@@ -22,6 +22,7 @@ class TitleAndMenuButtonSectionWidget extends StatelessWidget {
           Icons.more_vert,
           textDirection: TextDirection.ltr,
           color: Colors.grey,
+          size: 30,
         ),
       )
     ],

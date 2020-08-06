@@ -14,7 +14,8 @@ class MoreDetailsButtonSection extends StatelessWidget {
                   border:
                       Border.all(color: const Color.fromRGBO(59, 92, 184, 1)),
                   borderRadius: BorderRadius.all(Radius.circular(50))),
-              padding: EdgeInsets.all(10),
+              padding: EdgeInsets.all(8),
+              margin: EdgeInsets.fromLTRB(0, 0, 8, 0),
               child: Text(
                 'VER MAIS',
                 textDirection: TextDirection.ltr,

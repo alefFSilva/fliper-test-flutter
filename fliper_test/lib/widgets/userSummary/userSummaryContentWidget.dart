@@ -18,9 +18,9 @@ class UserSummaryContentWidget extends StatelessWidget {
     var mediaquery = MediaQuery.of(context);
 
     var summaryContent = Container(
-      height: mediaquery.size.height / 1.8,
+      height: mediaquery.size.height / 1.7,
       width: mediaquery.size.width / 1.1,
-      padding: EdgeInsets.all(20),
+      padding: EdgeInsets.fromLTRB(20, 20, 20, 0),
       decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.all(Radius.circular(20)),

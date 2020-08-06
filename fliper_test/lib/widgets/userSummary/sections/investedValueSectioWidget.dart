@@ -12,32 +12,37 @@ class InvestedValueSectionWidget extends StatelessWidget {
     var investedValueMask = new MoneyMaskedTextController();
     investedValueMask.updateValue(investedValue.toDouble());
 
-    final sectionContent = Row(
-      mainAxisAlignment: MainAxisAlignment.center,
-      textDirection: TextDirection.ltr,
-      children: <Widget>[
-        Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+    final sectionContent = Container(
+        margin: EdgeInsets.fromLTRB(0, 25, 0, 25),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          textDirection: TextDirection.ltr,
           children: <Widget>[
-            Text(
-              'Valor investido',
-              textDirection: TextDirection.ltr,
-              style: TextStyle(
-                  color: const Color.fromRGBO(96, 99, 119, 1), fontSize: 20),
-            ),
-            NoMaterialDividerWidget(),
-            Text(
-              'R\$ ${investedValueMask.text}',
-              textDirection: TextDirection.ltr,
-              style: TextStyle(
-                  color: const Color.fromRGBO(59, 92, 184, 1),
-                  fontSize: 25,
-                  fontWeight: FontWeight.bold),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(
+                  'Valor investido',
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                      color: const Color.fromRGBO(96, 99, 119, 1),
+                      fontSize: 20),
+                ),
+                SizedBox(
+                  height: 10,
+                ),
+                Text(
+                  'R\$ ${investedValueMask.text}',
+                  textDirection: TextDirection.ltr,
+                  style: TextStyle(
+                      color: const Color.fromRGBO(59, 92, 184, 1),
+                      fontSize: 25,
+                      fontWeight: FontWeight.bold),
+                )
+              ],
             )
           ],
-        )
-      ],
-    );
+        ));
 
     return sectionContent;
   }
