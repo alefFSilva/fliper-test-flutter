@@ -8,10 +8,10 @@ class ContainerWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     final mainContainer = Center(
         child: Scaffold(
-      body: Container(
-          color: const Color.fromRGBO(232, 235, 246, 1),
-          child: UserSummaryWidget(),
-    ));
+            body: Container(
+      color: const Color.fromRGBO(232, 235, 246, 1),
+      child: UserSummaryWidget(),
+    )));
     return mainContainer;
   }
 }
