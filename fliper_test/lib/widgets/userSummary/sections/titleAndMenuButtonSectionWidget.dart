@@ -1,3 +1,4 @@
+import 'package:fliper_test/widgets/userSummary/constants/userSummary.labels.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -7,7 +8,7 @@ class TitleAndMenuButtonSectionWidget extends StatelessWidget {
     textDirection: TextDirection.ltr,
     children: [
       Text(
-        "Seu resumo",
+        yourSummaryLabel,
         textDirection: TextDirection.ltr,
         style: TextStyle(
             fontWeight: FontWeight.bold,

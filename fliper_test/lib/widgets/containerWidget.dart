@@ -1,7 +1,8 @@
-import 'package:fliper_test/service/graphQLClient.service.dart';
 import 'package:fliper_test/widgets/userSummary/userSummaryWidget.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+import 'userSummary/constants/colors.dart';
 
 class ContainerWidget extends StatelessWidget {
   @override
@@ -9,7 +10,7 @@ class ContainerWidget extends StatelessWidget {
     final mainContainer = Center(
         child: Scaffold(
             body: Container(
-      color: const Color.fromRGBO(232, 235, 246, 1),
+      color: backgroundColor,
       child: UserSummaryWidget(),
     )));
     return mainContainer;

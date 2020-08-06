@@ -1,3 +1,5 @@
+import 'package:fliper_test/widgets/userSummary/constants/colors.dart';
+import 'package:fliper_test/widgets/userSummary/constants/userSummary.labels.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 
@@ -31,16 +33,14 @@ class ProfitabilityCDIGainSectionWidget extends StatelessWidget {
                 textDirection: TextDirection.ltr,
                 children: <Widget>[
                   Text(
-                    'Rentabilidade/mês',
+                    profitabilityPerMonthlabel,
                     textDirection: TextDirection.ltr,
-                    style: TextStyle(
-                        color: const Color.fromRGBO(96, 99, 119, 1),
-                        fontSize: 18),
+                    style: TextStyle(color: grayColor, fontSize: 18),
                   ),
                   Text('$profitabilityFormatted %',
                       textDirection: TextDirection.ltr,
                       style: TextStyle(
-                          color: const Color.fromRGBO(59, 92, 184, 1),
+                          color: blueColor,
                           fontSize: 18,
                           fontWeight: FontWeight.bold))
                 ],
@@ -50,16 +50,14 @@ class ProfitabilityCDIGainSectionWidget extends StatelessWidget {
                 textDirection: TextDirection.ltr,
                 children: <Widget>[
                   Text(
-                    'CDI',
+                    cdilabel,
                     textDirection: TextDirection.ltr,
-                    style: TextStyle(
-                        color: const Color.fromRGBO(96, 99, 119, 1),
-                        fontSize: 18),
+                    style: TextStyle(color: grayColor, fontSize: 18),
                   ),
                   Text('$cdiFormatted%',
                       textDirection: TextDirection.ltr,
                       style: TextStyle(
-                          color: const Color.fromRGBO(59, 92, 184, 1),
+                          color: blueColor,
                           fontSize: 18,
                           fontWeight: FontWeight.bold))
                 ],
@@ -69,16 +67,14 @@ class ProfitabilityCDIGainSectionWidget extends StatelessWidget {
                 textDirection: TextDirection.ltr,
                 children: <Widget>[
                   Text(
-                    'Ganho/mês',
+                    gainPerMonthLabel,
                     textDirection: TextDirection.ltr,
-                    style: TextStyle(
-                        color: const Color.fromRGBO(96, 99, 119, 1),
-                        fontSize: 18),
+                    style: TextStyle(color: grayColor, fontSize: 18),
                   ),
                   Text('R\$ ${gainMaskController.text}',
                       textDirection: TextDirection.ltr,
                       style: TextStyle(
-                          color: const Color.fromRGBO(59, 92, 184, 1),
+                          color: blueColor,
                           fontSize: 18,
                           fontWeight: FontWeight.bold))
                 ],

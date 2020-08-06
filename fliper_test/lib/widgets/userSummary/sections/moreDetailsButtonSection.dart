@@ -1,3 +1,5 @@
+import 'package:fliper_test/widgets/userSummary/constants/colors.dart';
+import 'package:fliper_test/widgets/userSummary/constants/userSummary.labels.dart';
 import 'package:flutter/widgets.dart';
 
 class MoreDetailsButtonSection extends StatelessWidget {
@@ -11,16 +13,15 @@ class MoreDetailsButtonSection extends StatelessWidget {
           },
           child: Container(
               decoration: BoxDecoration(
-                  border:
-                      Border.all(color: const Color.fromRGBO(59, 92, 184, 1)),
+                  border: Border.all(color: blueColor),
                   borderRadius: BorderRadius.all(Radius.circular(50))),
               padding: EdgeInsets.all(8),
               margin: EdgeInsets.fromLTRB(0, 0, 8, 0),
               child: Text(
-                'VER MAIS',
+                lookMoreLabel.toUpperCase(),
                 textDirection: TextDirection.ltr,
                 style: TextStyle(
-                    color: const Color.fromRGBO(59, 92, 184, 1),
+                    color: blueColor,
                     fontWeight: FontWeight.bold,
                     fontSize: 20),
               )))

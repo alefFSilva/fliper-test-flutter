@@ -1,4 +1,5 @@
-import 'package:fliper_test/widgets/tools/noMaterialDividerWidget.dart';
+import 'package:fliper_test/widgets/userSummary/constants/colors.dart';
+import 'package:fliper_test/widgets/userSummary/constants/userSummary.labels.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 
@@ -22,11 +23,9 @@ class InvestedValueSectionWidget extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 Text(
-                  'Valor investido',
+                  investedValueLabel,
                   textDirection: TextDirection.ltr,
-                  style: TextStyle(
-                      color: const Color.fromRGBO(96, 99, 119, 1),
-                      fontSize: 20),
+                  style: TextStyle(color: grayColor, fontSize: 20),
                 ),
                 SizedBox(
                   height: 10,
@@ -35,7 +34,7 @@ class InvestedValueSectionWidget extends StatelessWidget {
                   'R\$ ${investedValueMask.text}',
                   textDirection: TextDirection.ltr,
                   style: TextStyle(
-                      color: const Color.fromRGBO(59, 92, 184, 1),
+                      color: blueColor,
                       fontSize: 25,
                       fontWeight: FontWeight.bold),
                 )
