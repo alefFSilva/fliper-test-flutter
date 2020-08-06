@@ -28,59 +28,31 @@ class ProfitabilityCDIGainSectionWidget extends StatelessWidget {
         child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                textDirection: TextDirection.ltr,
-                children: <Widget>[
-                  Text(
-                    profitabilityPerMonthlabel,
-                    textDirection: TextDirection.ltr,
-                    style: TextStyle(color: grayColor, fontSize: 18),
-                  ),
-                  Text('$profitabilityFormatted %',
-                      textDirection: TextDirection.ltr,
-                      style: TextStyle(
-                          color: blueColor,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold))
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                textDirection: TextDirection.ltr,
-                children: <Widget>[
-                  Text(
-                    cdilabel,
-                    textDirection: TextDirection.ltr,
-                    style: TextStyle(color: grayColor, fontSize: 18),
-                  ),
-                  Text('$cdiFormatted%',
-                      textDirection: TextDirection.ltr,
-                      style: TextStyle(
-                          color: blueColor,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold))
-                ],
-              ),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                textDirection: TextDirection.ltr,
-                children: <Widget>[
-                  Text(
-                    gainPerMonthLabel,
-                    textDirection: TextDirection.ltr,
-                    style: TextStyle(color: grayColor, fontSize: 18),
-                  ),
-                  Text('R\$ ${gainMaskController.text}',
-                      textDirection: TextDirection.ltr,
-                      style: TextStyle(
-                          color: blueColor,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold))
-                ],
-              )
+              _getLabelAndValueRow(
+                  profitabilityPerMonthlabel, '$profitabilityFormatted %'),
+              _getLabelAndValueRow(cdilabel, '$cdiFormatted%'),
+              _getLabelAndValueRow(
+                  gainPerMonthLabel, 'R\$ ${gainMaskController.text}'),
             ]));
 
     return sectionContent;
+  }
+
+  Widget _getLabelAndValueRow(String labelText, String valueText) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      textDirection: TextDirection.ltr,
+      children: <Widget>[
+        Text(
+          labelText,
+          textDirection: TextDirection.ltr,
+          style: TextStyle(color: grayColor, fontSize: 18),
+        ),
+        Text(valueText,
+            textDirection: TextDirection.ltr,
+            style: TextStyle(
+                color: blueColor, fontSize: 18, fontWeight: FontWeight.bold))
+      ],
+    );
   }
 }
