@@ -1,8 +1,6 @@
 import 'package:fliper_test/widgets/containerWidget.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:graphql_flutter/graphql_flutter.dart';
-
-import 'service/graphQLClient.service.dart';
 
 void main() {
   runApp(FliperTestApp());
@@ -11,9 +9,9 @@ void main() {
 class FliperTestApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return GraphQLProvider(
+    return MaterialApp(
+        home: Center(
       child: ContainerWidget(),
-      client: graphQLClient,
-    );
+    ));
   }
 }

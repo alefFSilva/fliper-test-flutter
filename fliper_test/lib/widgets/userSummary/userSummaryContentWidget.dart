@@ -1,4 +1,5 @@
 import 'package:fliper_test/widgets/tools/noMaterialDividerWidget.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 import 'DTOs/userSummaryDTO.dart';
@@ -14,15 +15,28 @@ class UserSummaryContentWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var mediaquery = MediaQuery.of(context);
+
     var summaryContent = Container(
+      height: mediaquery.size.height / 1.8,
+      width: mediaquery.size.width / 1.1,
       padding: EdgeInsets.all(20),
+      decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.all(Radius.circular(20)),
+          boxShadow: [
+            BoxShadow(
+                color: const Color.fromRGBO(154, 163, 188, 1),
+                spreadRadius: 0,
+                blurRadius: 0,
+                offset: Offset(2, 2))
+          ]),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         crossAxisAlignment: CrossAxisAlignment.start,
         textDirection: TextDirection.ltr,
         children: <Widget>[
           TitleAndMenuButtonSectionWidget(),
-          SizedBox(height: 10), //mUDAR PARA CONTAINER INTERNO COM MARGINS
           InvestedValueSectionWidget(investedValue: userData.total),
           ProfitabilityCDIGainSectionWidget(
             profitability: userData.profitability,
