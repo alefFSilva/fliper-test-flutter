@@ -9,7 +9,7 @@ class MoreDetailsButtonSection extends StatelessWidget {
     children: <Widget>[
       GestureDetector(
           onTap: () {
-            print("Hellow boy");
+            print("MoreDetailsButton Clicked");
           },
           child: Container(
               decoration: BoxDecoration(

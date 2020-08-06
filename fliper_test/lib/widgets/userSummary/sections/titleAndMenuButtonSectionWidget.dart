@@ -17,7 +17,7 @@ class TitleAndMenuButtonSectionWidget extends StatelessWidget {
       ),
       GestureDetector(
         onTap: () {
-          print("Oie");
+          print("MenuButton clicked");
         },
         child: Icon(
           Icons.more_vert,
