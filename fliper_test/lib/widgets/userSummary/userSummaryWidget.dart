@@ -1,5 +1,5 @@
-import 'package:fliper_test/service/graphQLClient.service.dart';
-import 'package:fliper_test/service/queries/userData.queries.dart';
+import 'package:fliper_test/services/graphQLClient.service.dart';
+import 'package:fliper_test/services/queries/userData.queries.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:graphql_flutter/graphql_flutter.dart';
