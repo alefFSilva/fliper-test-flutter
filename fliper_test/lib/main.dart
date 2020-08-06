@@ -9,9 +9,6 @@ void main() {
 class FliperTestApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-        home: Center(
-      child: ContainerWidget(),
-    ));
+    return MaterialApp(home: ContainerWidget());
   }
 }

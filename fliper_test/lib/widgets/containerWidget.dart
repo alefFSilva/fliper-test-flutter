@@ -7,12 +7,15 @@ import 'package:graphql_flutter/graphql_flutter.dart';
 class ContainerWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final mainContainer = Container(
-        color: const Color.fromRGBO(232, 235, 246, 1),
-        child: GraphQLProvider(
-          child: UserSummaryWidget(),
-          client: graphQLClient,
-        ));
+    final mainContainer = Center(
+        child: Scaffold(
+      body: Container(
+          color: const Color.fromRGBO(232, 235, 246, 1),
+          child: GraphQLProvider(
+            child: UserSummaryWidget(),
+            client: graphQLClient,
+          )),
+    ));
     return mainContainer;
   }
 }
