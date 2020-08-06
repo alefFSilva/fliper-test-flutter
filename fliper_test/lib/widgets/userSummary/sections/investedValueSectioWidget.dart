@@ -1,3 +1,4 @@
+import 'package:fliper_test/widgets/tools/noMaterialDividerWidget.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 
@@ -8,14 +9,15 @@ class InvestedValueSectionWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var controller = new MoneyMaskedTextController();
-    controller.updateValue(investedValue.toDouble());
+    var investedValueMask = new MoneyMaskedTextController();
+    investedValueMask.updateValue(investedValue.toDouble());
 
     final sectionContent = Row(
       mainAxisAlignment: MainAxisAlignment.center,
       textDirection: TextDirection.ltr,
       children: <Widget>[
         Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             Text(
               'Valor investido',
@@ -23,8 +25,9 @@ class InvestedValueSectionWidget extends StatelessWidget {
               style: TextStyle(
                   color: const Color.fromRGBO(96, 99, 119, 1), fontSize: 20),
             ),
+            NoMaterialDividerWidget(),
             Text(
-              'R\$ ${controller.text}',
+              'R\$ ${investedValueMask.text}',
               textDirection: TextDirection.ltr,
               style: TextStyle(
                   color: const Color.fromRGBO(59, 92, 184, 1),
